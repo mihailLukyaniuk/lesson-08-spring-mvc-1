@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>lesson-08-spring-mvc</title>
+    <!--/*/ <th:block th:include="menutop :: head"></th:block> /*/-->
+
+</head>
+<body>
+<div>
+    <!--/*/ <th:block th:include="menu :: header"></th:block> /*/-->
+    <h3>Users Profile</h3>
+    <div>
+        <form>
+            <div>
+                <label>User Id:</label>
+                <div>
+                    <p th:text="${user.id}">User Id</p></div>
+            </div>
+            <div>
+                <label>First Name:</label>
+                <div>
+                    <p th:text="${user.firstName}">description</p>
+                </div>
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <div>
+                    <p th:text="${user.lastName}">Priceaddd</p>
+                </div>
+            </div>
+            <div>
+                <label>User Info:</label>
+                <div>
+                    <p th:text="${user.profileInfo}">url....</p>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class UserRepositoryStaticImpl implements UserRepository {
 
-    private static final List<User> USERS = new ArrayList<>();
+    private static final ArrayList<User> USERS = new ArrayList<>();
 
     private int currentId = 1;
 
@@ -42,8 +42,20 @@ public class UserRepositoryStaticImpl implements UserRepository {
     }
 
     @Override
+    public User editUser(User user, int id) {
+        if (USERS.size() <= id) {
+            USERS.add(USERS.size(), user);
+        } else {
+            USERS.add(id, user);
+        }
+        USERS.remove(getUser(user.getId()));
+        return user;
+    }
+
+    @Override
     public void removeUser(int id) {
         USERS.remove(getUser(id));
+
     }
 
     private int getId() {

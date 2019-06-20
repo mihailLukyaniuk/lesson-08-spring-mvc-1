@@ -1,13 +1,16 @@
 package com.godeltech.mastery.springmvc.entity;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 import java.util.Objects;
 
+@Valid
 public class User {
 
     Integer id;
-
+    @NotBlank
     String firstName;
-
+    @NotBlank
     String lastName;
 
     String profileInfo;

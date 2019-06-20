@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>lesson-08-spring-mvc</title>
+    <!--/*/ <th:block th:include="menutop :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="menu :: header"></th:block> /*/-->
+    <h2>Add user info</h2>
+    <div>
+        <form th:object="${user}" th:action="@{'/user/editUser/{id}'(id=${user.id})}" method="post">
+            <div>
+                <label>First Name:</label>
+                <div>
+                    <input type="text" th:field="*{firstName}"/>
+                </div>
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <div>
+                    <input type="text" th:field="*{lastName}"/>
+                </div>
+            </div>
+            <div>
+                <label>Profile Info:</label>
+                <div>
+                    <input type="text" th:field="*{profileInfo}"/>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

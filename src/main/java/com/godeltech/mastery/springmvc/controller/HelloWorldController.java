@@ -8,6 +8,6 @@ public class HelloWorldController {
 
     @RequestMapping({"/", "/index", "hello"})
     public String helloWorld() {
-        return "helloWorld";
+        return "redirect:/users/";
     }
 }

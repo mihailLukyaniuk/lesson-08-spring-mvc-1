@@ -27,6 +27,10 @@ public class UserService {
         return userRepository.addUser(user);
     }
 
+    public User editUser(User user, int id) {
+        return userRepository.editUser(user, id);
+    }
+
     public void removeUser(int id) {
         userRepository.removeUser(id);
     }
