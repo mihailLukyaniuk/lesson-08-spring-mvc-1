@@ -48,7 +48,7 @@ public class UserRepositoryStaticImpl implements UserRepository {
         } else {
             USERS.add(id, user);
         }
-        USERS.remove(getUser(user.getId()));
+        USERS.remove(getUser(id));
         return user;
     }
 
